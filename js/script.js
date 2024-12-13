@@ -16,3 +16,7 @@ sendButton.addEventListener('click', () => {
         document.getElementById('error-message').value = '';
     }
 });
+
+function closeBox() {
+    document.querySelector('.centered-box').style.display = 'none';
+}

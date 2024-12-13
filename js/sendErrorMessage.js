@@ -3,14 +3,14 @@ function sendErrorMessage() {
     $('#data').html(data);
     console.log(data);
     $.ajax({
-        url: "https://community.sandbox.local.dionera.dev/posts",
+        url: "http://community.sandbox.local/posts",
         type: "POST",
-        data: '{raw:'+data+'}',
+        data: '{"raw":'+data+'}',
         processData: false,
         contentType: false,
         timeout: 5000,
         success: function(response){
-            $('#data').html("https://community.sandbox.local.dionera.dev/posts/"+response);
+            $('#data').html("https://community.sandbox.local.dionera.dev/posts/"+$.parseJSON(response)['id']);
         },
         error: function(xhr, textStatus, error){
             console.log(error);

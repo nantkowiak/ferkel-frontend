@@ -11,12 +11,12 @@ function getDataFromUser(){
 }
 
 function beautifyData(data){
-    let htmlData = '<div><p>'+data['message']+'</p><table>';
+    let htmlData = '<div><table>';
     $.each(data, function(keyName, keyValue) {
         if(keyName !== 'message') {
             htmlData += '<tr><td><b>'+keyName+'</b></td><td>'+keyValue+'</td></tr>';
         }
     });
-    htmlData += '</table></div>';
+    htmlData += '</table><p>'+data['message']+'</p></div>';
     return htmlData;
 }

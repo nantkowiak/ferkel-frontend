@@ -1,0 +1,24 @@
+/* Positionierung des "Fehler melden"-Buttons */
+#report-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Box für das Fehlerformular */
+#report-box {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    display: none;
+    z-index: 1000;
+}

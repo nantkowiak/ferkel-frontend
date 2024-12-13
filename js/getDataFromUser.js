@@ -7,5 +7,16 @@ function getDataFromUser(){
         browser:navigator.userAgent,
         message:$('#error-message').val(),
     };
-    return data;
+    return beautifyData(data);
+}
+
+function beautifyData(data){
+    let htmlData = '<div><p>'+data['message']+'</p><table>';
+    $.each(data, function(keyName, keyValue) {
+        if(keyName !== 'message') {
+            htmlData += '<tr><td><b>'+keyName+'</b></td><td>'+keyValue+'</td></tr>';
+        }
+    });
+    htmlData += '</table></div>';
+    return htmlData;
 }

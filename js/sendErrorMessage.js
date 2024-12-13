@@ -10,7 +10,7 @@ function sendErrorMessage() {
         contentType: false,
         timeout: 5000,
         success: function(response){
-            $('#data').html("https://community.sandbox.local/posts/"+$.parseJSON(response)['id']);
+            $('#data').html("http://community.sandbox.local/posts/"+$.parseJSON(response)['id']);
         },
         error: function(xhr, textStatus, error){
             console.log(error);

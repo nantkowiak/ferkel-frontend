@@ -10,7 +10,7 @@ function sendErrorMessage() {
         contentType: false,
         timeout: 5000,
         success: function(response){
-            $('#data').html("http://community.sandbox.local/posts/"+response.id);
+            $('#data').html("<a href='http://community.sandbox.local/posts/"+response.id+"' target='_blank'>Link to the Ticket #"+response.id+"</a>");
         },
         error: function(xhr, textStatus, error){
             console.log(error);
